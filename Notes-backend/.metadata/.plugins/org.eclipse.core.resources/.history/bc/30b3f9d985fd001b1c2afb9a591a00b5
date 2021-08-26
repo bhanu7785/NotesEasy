@@ -1,0 +1,5 @@
+package com.notes.easy.entities;
+
+public class Course {
+
+}

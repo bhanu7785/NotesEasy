@@ -1,0 +1,15 @@
+package com.notes.easy.service;
+
+import java.util.List;
+
+import com.notes.easy.entities.Course;
+
+public class CoursesServiceImpl implements CoursesServcie {
+   	
+	@Override
+	public List<Course> getAllCourses() {
+		
+		return null;
+	}
+
+}

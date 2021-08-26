@@ -1,0 +1,5 @@
+package com.notes.easy.service;
+
+public interface CoursesServcie {
+
+}

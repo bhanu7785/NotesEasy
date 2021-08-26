@@ -1,0 +1,51 @@
+package com.notes.easy.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.notes.easy.entity.Course;
+import com.notes.easy.service.CourseService;
+
+@RestController
+public class CourseController {
+	
+	
+	@Autowired
+	private CourseService courseService;
+	
+	@GetMapping("/courses")
+	public List<Course> getAllCourses() {
+		
+		return courseService.getAllCourses();
+		
+	}
+	
+	@PostMapping("/courses")
+	public Course addCourseById (@RequestBody Course course) {
+		
+		return courseService.addCourse(course);
+	}
+	
+	@DeleteMapping("/courses/{cid}")
+	public void deleteCourseById(@PathVariable("cid") int cid) {
+		 courseService.deleteCourse(cid);
+	}
+	
+	@PutMapping("/courses")
+	public Course updateCourseById(@PathVariable("cid") long cid,@RequestBody Course course) {
+		
+		return courseService.updateCourseById(cid,course);
+	}
+	
+
+}

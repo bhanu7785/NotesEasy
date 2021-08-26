@@ -1,0 +1,5 @@
+package com.notes.easy.controller;
+
+public class CoursesController {
+
+}

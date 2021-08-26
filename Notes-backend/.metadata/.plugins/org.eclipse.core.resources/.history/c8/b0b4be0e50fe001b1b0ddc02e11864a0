@@ -1,0 +1,5 @@
+package com.notes.easy.helper;
+
+public class FileUploadHelper {
+
+}
